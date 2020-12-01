@@ -1,0 +1,98 @@
+/* modificación de iconos */
+
+
+/* modificación posición de los controles */
+
+q { quotes: "“" "”" "‘" "’"; }
+body {
+  counter-reset: theorem;
+  counter-reset: definition;
+  counter-reset: sidenote-counter;
+
+  color: hsl(0, 5%, 10%);
+  background-color: hsl(210, 20%, 98%);
+
+  text-rendering: optimizeLegibility;
+}
+h1.title {
+  color: #000;
+}
+
+.subtitle {
+  color: #000;
+  font-weight: bold;
+  font-size: 2.3em;
+}
+
+.author {
+  color: #000;
+  font-weight: bold;
+}
+
+.date {
+  color: #000;
+  font-weight: bold;
+}
+/* Theorem */
+.theorem {
+  counter-increment: theorem;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
+  font-size: 1.2em;
+}
+.theorem::before {
+  content: 'Theorem ' counter(theorem) '. ';
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Lemma */
+.lemma {
+  counter-increment: theorem;
+  display: block;
+  margin: 12px 0;
+  font-style: italic;
+}
+.lemma::before {
+  content: 'Lemma ' counter(theorem) '. ';
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Proof */
+.proof {
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+  position: relative;
+}
+.proof::before {
+  content: 'Proof. ' attr(title);
+  font-style: italic;
+}
+.proof:after {
+  content: '◾️';
+  position: absolute;
+  right: -12px;
+  bottom: -2px;
+}
+
+/* Definition */
+.definition {
+  counter-increment: definition;
+  display: block;
+  margin: 12px 0;
+  font-style: normal;
+}
+.definition::before {
+  content: 'Definition ' counter(definition) '. ';
+  font-weight: bold;
+  font-style: normal;
+}
+.marginnote code, .sidenote code { font-size: 0.9rem; }
+
+:lang(es) .theorem::before { content: 'Teorema ' counter(theorem) '. ' !important; }
+:lang(es) .lemma::before { content: 'Lema ' counter(theorem) '. ' !important; }
+:lang(es) .proof::before { content: 'Demostración. ' attr(title) !important; }
+:lang(es) .definition::before { content: 'Definición ' counter(definition) '. ' !important; }
