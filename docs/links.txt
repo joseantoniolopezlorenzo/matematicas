@@ -1,0 +1,112 @@
+
+<p style="text-align:center">ATAJOS de TECLADO</p>
+<p>'Ctl': tecla control<br> 'May': tecla mayúsculas<br> 'Esp': tecla espacio</p>
+<table class="help">
+  <caption>Movimiento de diapositivas</caption>
+  <tr>
+    <th>TECLAS</th>
+    <th>ACCIÓN</th>
+  </tr>
+<tbody>
+  <tr>
+    <td style="width:50%">Ctl + May + f</td>
+    <td style="width:50%">Buscar</td>
+  </tr>
+  <tr>
+    <td>n ó Esp</td>
+    <td>Siguiente</td>
+  </tr>
+  <tr>
+    <td>p</td>
+    <td>Previa</td>
+  </tr>
+  <tr>
+    <td>← ó h</td>
+    <td>Izquierda</td>
+  </tr>
+  <tr>
+    <td>→ ó l</td>
+    <td>Derecha</td>
+  </tr>
+  <tr>
+    <td>↑ ó k</td>
+    <td>Arriba</td>
+  </tr>
+  <tr>
+    <td>↓ ó j</td>
+    <td>Abajo</td>
+  </tr>
+  <tr>
+    <td>Inicio</td>
+    <td>1ª diapositiva</td>
+  </tr>
+  <tr>
+    <td>Fin</td>
+    <td>Última diapositiva</td>
+  </tr>
+</tbody>
+</table>
+
+<table class="help">
+  <caption>Presentación</caption>
+  <tr>
+    <th>TECLAS</th>
+    <th>ACCIÓN</th>
+  </tr>
+<tbody>
+  <tr>
+    <td>Esc</td>
+    <td>Miniatura</td>
+  </tr>
+  <tr>
+    <td>Ctl+May+f</td>
+    <td>Búsqueda</td>
+  </tr>
+  <tr>
+    <td>f</td>
+    <td>Pantalla completa</td>
+  </tr>
+   <tr>
+    <td>m</td>
+    <td>Alterna menú</td>
+  </tr>
+  <tr>
+    <td>Ctl + Click</td>
+    <td>Zoom</td>
+  </tr>
+</tbody>
+</table>
+
+<table class="help">
+  <caption>Anotaciones</caption>
+  <tr>
+    <th>TECLAS</th>
+    <th>ACCIÓN</th>
+  </tr>
+<tbody>
+  <tr>
+    <td>b</td>
+    <td>Alterna pizarra</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td>Alterna marcador</td>
+  </tr>
+  <tr>
+    <td>x</td>
+    <td>Siguiente color</td>
+  </tr>
+   <tr>
+    <td>y</td>
+    <td>Color previo</td>
+  </tr>
+  <tr>
+    <td>+</td>
+    <td>Limpia anotaciones</td>
+  </tr>
+  <tr>
+    <td>Retroceso</td>
+    <td>Borra todas las anotaciones</td>
+  </tr>
+</tbody>
+</table>

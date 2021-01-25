@@ -1,0 +1,19 @@
+from: markdown+emoji
+to: html5
+fail-if-warnings: false
+standalone: true
+section-divs: true
+eol: lf
+filters:
+  - pandoc-static-katex
+  - pandoc-sidenote
+template: ./templates/tufte.html5
+variables:
+  author: '@JallProfesor'
+  lang: 'es-ES'
+  css:
+    - ./assets/css/katex.min.css
+    - ./assets/css/tufte.min.css
+    - ./assets/css/custom.min.css
+  favicon:
+    - ./assets/images/favicon.png

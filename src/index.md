@@ -1,20 +1,25 @@
 ---
-title: Tufte Pandoc CSS
-subtitle: Starter files for Pandoc Markdown with Tufte CSS
-author: Jake Zimmerman
-date: 'November 3, 2016'
+title: Matemáticas para secundaria y bachillerato
+subtitle: Índice general
+author: JallProfesor
+date: 25/01/2021
+title-prefix: Matemáticas para secundaria y bachillerato
+description: Recursos educativos abiertos para el estudio de las matemáticas de secunadria y bachillerato en España.
+keywords:
+    - educación
+    - matemáticas
+    - ESO
+    - BACHILLERATO
+    - REA
 ---
 
-# Hola mundo
+# Índice general.
 
-este es un mundo cruel [^pdsn]
-
-[^pdsn]: In particular, a separate library called [`pandoc-sidenote`] handles
-  the transformation of footnotes into sidenotes.
-
-
-:::{.theorem}
-
-$e^{i\pi}+1=0$
-
-:::
+- 4º de ESO
+    ~ Tema 1:Tema 1: Los números reales
+        - [Teoria](./eso-4/tema-1/teoria.html)
+        - [Resueltos](./eso-4/tema-1/resueltos.html)
+- 1º de Bachillerato
+    ~ Tema 1: Los números reales
+        - [Teoria](./bachillerato-1/tema-1/teoria.html)
+        - [Resueltos](./bachillerato-1/tema-1/resueltos.html)

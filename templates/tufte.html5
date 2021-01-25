@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$title$</title>
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -11,13 +12,28 @@ $if(date-meta)$
   <meta name="dcterms.date" content="$date-meta$">
 $endif$
 $if(keywords)$
-  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
 $endif$
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+$------------------------------------------------------------------> description
+$if(description)$
+  <meta name="description" content="$description$">
+$endif$
+$-----------------------------------------------> SOCIAL MEDIA
+  <meta property="og:title" content="$title-prefix$ - $title$">
+  <meta property="og:description" content="$description$">
+  <meta property="og:image" content="https://joseantoniolopezlorenzo.github.io/pandoc-revealjs/assets/images/meta-facebook-image.jpg">
+  <meta property="og:url" content="https://joseantoniolopezlorenzo.github.io/pandoc-revealjs/">
+  <meta name="twitter:image" content="https://joseantoniolopezlorenzo.github.io/pandoc-revealjs/assets/images/meta-twitter-image.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:site_name" content="$title-prefix$">
+  <meta name="twitter:image:alt" content="$title-prefix$">
+  <meta name="twitter:site" content="@JallProfesor">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="shortcut icon" href="$if(favicon)$$favicon$$endif$" />
   <style type="text/css">code{white-space: pre;}</style>
-$if(quotes)$
   <style type="text/css">q { quotes: "“" "”" "‘" "’"; }</style>
-$endif$
 $if(highlighting-css)$
   <style type="text/css">
 $highlighting-css$
@@ -26,9 +42,6 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
-$if(math)$
-  $math$
-$endif$
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -45,10 +58,10 @@ $if(title)$
 <header>
 <h1 class="title">$title$</h1>
 $if(subtitle)$
-<p class="subtitle">$subtitle$</p>
+<h2 class="subtitle">$subtitle$</h2>
 $endif$
 $if(date)$
-<p class="byline">$date$$if(author)$ &ndash; $author$$endif$</p>
+<p class="byline">Última actualización: $date$$if(author)$ &ndash; $author$$endif$</p>
 $else$
 $if(author)$
 <p class="byline">$author$</p>

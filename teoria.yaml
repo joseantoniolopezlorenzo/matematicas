@@ -4,15 +4,18 @@ fail-if-warnings: false
 standalone: true
 section-divs: true
 eol: lf
+toc: true
+toc-depth: 3
 filters:
   - pandoc-static-katex
-  - pandoc-imagine
   - pandoc-sidenote
 template: ./templates/tufte.html5
 variables:
   author: '@JallProfesor'
   lang: 'es-ES'
   css:
-    - ./assets/css/katex.min.css
-    - ./assets/css/tufte.min.css
-    - ./assets/css/custom.min.css
+    - ../../assets/css/katex.min.css
+    - ../../assets/css/tufte.min.css
+    - ../../assets/css/custom.min.css
+  favicon:
+    - ../../assets/images/favicon.png

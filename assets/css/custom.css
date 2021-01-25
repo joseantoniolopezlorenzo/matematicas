@@ -3,7 +3,6 @@
 
 /* modificación posición de los controles */
 
-q { quotes: "“" "”" "‘" "’"; }
 body {
   counter-reset: theorem;
   counter-reset: definition;
@@ -17,7 +16,21 @@ body {
 h1.title {
   color: #000;
 }
+.slide-menu-items {
+  font-size: 0.8em;
+}
+table.help {
+  border: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
 
+table.help>th,
+td {
+  border: 1px solid #ccc;
+}
 .subtitle {
   color: #000;
   font-weight: bold;

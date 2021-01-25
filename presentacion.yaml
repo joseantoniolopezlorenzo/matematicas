@@ -1,0 +1,31 @@
+from: markdown+emoji
+to: revealjs
+fail-if-warnings: false
+standalone: true
+section-divs: true
+eol: lf
+filters:
+  - pandoc-static-katex
+template: ./templates/revealjs.html5
+variables:
+  author: '@JallProfesor'
+  lang: 'es-ES'
+  css:
+    - ../../assets/css/custom.min.css
+    - ../../assets/css/katex.min.css
+  favicon:
+    - ../../assets/images/favicon.png
+  theme: serif
+  ## reveal.js config;
+  mouseWheel: false
+  width: 1920
+  height: 1080
+
+  ## additional reveal.js plug-in config
+  verticator:
+    enable: true
+    darktheme: true
+    color: '#777777'
+    oppositecolor: '#cccccc'
+    skipuncounted: true
+    clickable: true

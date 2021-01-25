@@ -8,40 +8,54 @@ var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
 var path = require("path");
 var browserSync = require("browser-sync").create();
+var fs = require("fs");
 
 const reload = browserSync.reload;
-const github = process.argv[4];
+// const github = process.argv[4];
 
-gulp.task("convert-md", function() {
-  var options = {
-    continueOnError: false,
-    pipeStdout: true,
-  };
+const options = {
+  continueOnError: false,
+  pipeStdout: true,
+};
 
-  var reportOptions = {
-    err: true,
-    stderr: true,
-    stdout: false,
-  };
-
-  function html(file) {
-    var parsePath = path.parse(file);
-    const docsPath = parsePath.dir.replace("src", "docs");
-    return path.join(docsPath, parsePath.name) + ".html";
+const reportOptions = {
+  err: true,
+  stderr: true,
+  stdout: false,
+};
+function makedir(docsPath) {
+  gulpexec(`fs.mkdir(docsPath)`, options);
+}
+function html(file) {
+  var parsePath = path.parse(file);
+  const docsPath = parsePath.dir.replace("src", "docs");
+  if (!fs.existsSync(docsPath)) {
+    makedir(docksPath);
   }
+  const newPath = path.join(docsPath, parsePath.name) + ".html";
+  if (parsePath.name === "index") {
+    return `pandoc -d index -s ${file} -o ${newPath}`;
+  } else if (parsePath.name === "resueltos") {
+    return `pandoc -d presentacion -s ${file} -o ${newPath}`;
+  } else {
+    return `pandoc -d teoria -s ${file} -o ${newPath}`;
+  }
+}
 
+gulp.task("convert-md", function () {
   return gulp
     .src("./src/**/*.md")
     .pipe(
       gulpexec(
-        (file) => `pandoc -d matematicas -s ${file.path} -o ${html(file.path)}`,
+        //(file) => `pandoc -d matematicas -s ${file.path} -o ${html(file.path)}`,
+        (file) => html(file.path),
         options
       )
     )
     .pipe(gulpexec.reporter(reportOptions));
 });
 
-gulp.task("minify-css", function() {
+gulp.task("minify-css", function () {
   return gulp
     .src(["./assets/css/*.css"])
     .pipe(cleanCSS({ compatibility: "ie8" }))
@@ -49,20 +63,24 @@ gulp.task("minify-css", function() {
     .pipe(gulp.dest("./docs/assets/css"));
 });
 
-gulp.task("cp-images", function() {
+gulp.task("cp-images", function () {
   return gulp
-    .src(["./assets/images/*.*", "./assets/images/**/*.png", "./assets/images/**/*.svg"])
+    .src([
+      "./assets/images/*.*",
+      "./assets/images/**/*.png",
+      "./assets/images/**/*.svg",
+    ])
     .pipe(gulp.dest("./docs/assets/images"));
 });
 
-gulp.task("cp-javascript", function() {
+gulp.task("cp-javascript", function () {
   return gulp
     .src(["./assets/js/scripts.js"])
     .pipe(uglify())
     .pipe(gulp.dest("./docs/assets/js"));
 });
 
-gulp.task("minify-html", function() {
+gulp.task("minify-html", function () {
   return gulp
     .src("./docs/**/*.html")
     .pipe(
@@ -70,7 +88,7 @@ gulp.task("minify-html", function() {
         collapseWhitespace: true,
         minifyCSS: true,
         minifyJS: true,
-        removeComments: true
+        removeComments: true,
       })
     )
     .pipe(gulp.dest("./docs"));
@@ -78,19 +96,25 @@ gulp.task("minify-html", function() {
 
 gulp.task(
   "server",
-  gulp.series("convert-md", "cp-javascript", "minify-css", "cp-images", function() {
-    browserSync.init({
-      server: "./docs",
-    });
-    gulp.watch("./src/**/*.md", gulp.series("convert-md"));
-    gulp.watch("./templates/*.*", gulp.series("convert-md"));
-    gulp.watch("./assets/css/*.css", gulp.series("minify-css"));
-    gulp.watch("./assets/js/*.js", gulp.series("cp-javascript"));
-    gulp.watch("./assets/images/**/*.*", gulp.series("cp-images"));
-    gulp.watch("./docs/**/*.html").on("change", reload);
-    gulp.watch("./docs/assets/css/*.css").on("change", reload);
-    gulp.watch("./docs/assets/js/*.js").on("change", reload);
-  })
+  gulp.series(
+    "convert-md",
+    "cp-javascript",
+    "minify-css",
+    "cp-images",
+    function () {
+      browserSync.init({
+        server: "./docs",
+      });
+      gulp.watch("./src/**/*.md", gulp.series("convert-md"));
+      gulp.watch("./templates/*.*", gulp.series("convert-md"));
+      gulp.watch("./assets/css/*.css", gulp.series("minify-css"));
+      gulp.watch("./assets/js/*.js", gulp.series("cp-javascript"));
+      gulp.watch("./assets/images/**/*.*", gulp.series("cp-images"));
+      gulp.watch("./docs/**/*.html").on("change", reload);
+      gulp.watch("./docs/assets/css/*.css").on("change", reload);
+      gulp.watch("./docs/assets/js/*.js").on("change", reload);
+    }
+  )
 );
 
 gulp.task("default", gulp.series("server"));
