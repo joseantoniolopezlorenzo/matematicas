@@ -8,6 +8,8 @@ filters:
   - pandoc-static-katex
   - pandoc-sidenote
 template: ./templates/tufte.html5
+include-after-body: 
+  - ./templates/includes/index.txt
 variables:
   author: '@JallProfesor'
   lang: 'es-ES'

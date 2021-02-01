@@ -1,5 +1,5 @@
 ---
-title: Matemáticas para secundaria y bachillerato
+title: Matemáticas preuniversitarias
 subtitle: Índice general
 author: JallProfesor
 date: 25/01/2021
@@ -11,6 +11,7 @@ keywords:
     - ESO
     - BACHILLERATO
     - REA
+
 ---
 
 # Índice general.

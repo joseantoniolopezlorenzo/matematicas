@@ -100,6 +100,8 @@ $body$
   <script src="../../assets/js/reveal.js/plugin/chalkboard/plugin.min.js"></script>
   <script src="../../assets/js/title-footer/title-footer.min.js"></script>
   <script src="../../assets/js/verticator/verticator.min.js"></script>
-  <script src="../../assets/js/scripts.js"></script>
+  <script src="../../assets/js/jsxgraph/jsxgraphcore.js"></script>
+  <script src="../../assets/js/presentacion.js"></script>
+  <script src="../../assets/js/p-scripts.js"></script>
   </body>
 </html>

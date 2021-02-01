@@ -75,7 +75,7 @@ gulp.task("cp-images", function () {
 
 gulp.task("cp-javascript", function () {
   return gulp
-    .src(["./assets/js/scripts.js"])
+    .src(["./assets/js/*.js"])
     .pipe(uglify())
     .pipe(gulp.dest("./docs/assets/js"));
 });
