@@ -42,9 +42,13 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
+$if(math)$
+  $math$
+$endif$
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <script src="../../assets/js/jsxgraph/jsxgraphcore.js"></script>
 $for(header-includes)$
   $header-includes$
 $endfor$
@@ -53,6 +57,7 @@ $endfor$
 $for(include-before)$
 $include-before$
 $endfor$
+$nombre$
 <article>
 $if(title)$
 <header>
@@ -79,6 +84,8 @@ $body$
 $for(include-after)$
 $include-after$
 $endfor$
-
+$if(script)$
+<script src="$script$"></script>
+$endif$
 </body>
 </html>

@@ -10,6 +10,7 @@ keywords:
     - números reales
     - radicales
     - logaritmos
+script: ../../assets/js/graficos/eso4-t1.js
 ---
 - [Ejercicios resueltos](./resueltos.html)
 - [Indice general](/index.html)
@@ -18,9 +19,11 @@ keywords:
 ****
 ## CURSOS ANTERIORES.
 
+Conujuntos numéricos que ya has estudiado:[^nota1]
+
 * **NATURALES** $\mathbb N$: $1, 2, 3, \sqrt[3]{4}, 2^{0}, \sqrt{16}, 3^{1}, 4^{2}, ...$
 * **ENTEROS** $\mathbb Z$: $\mathbb N \cup \{0, -1, -2, ...\}$
-* **RACIONALES** $\mathbb Q$ \ [^nota1]
+* **RACIONALES** $\mathbb Q$ \ 
   Números racionales son los que se pueden poner como *cociente* de dos números enteros. Su expresión decimal puede ser *exacta* ($\frac{3}{4} = 0,75$ ) o *periódica* ($\frac{1}{3} = 0,\overset{\frown}{3}$). 
 
   [^nota1]:
@@ -36,28 +39,32 @@ pueden expresarse como fracción de números enteros.
 
 En otras palabras, son todos aquellos números que tienen una *expresión decimal que no es ni exacta ni periódica*, es decir, infinitas cifras decimales y sin periodo. 
 
-Por ejemplo: $\sqrt{2},~\sqrt{3},~\pi,~e$
+Por ejemplo: $\sqrt{2},~\sqrt{3},~\pi,~e, ~\varphi ~ \text{(proporción áurea)}$
 
 
 ## LOS REALES.
 Los **NÚMEROS REALES** son la unión de los *racionales* y los *irracionales* [^nota2]
 $$\mathbb R = \mathbb Q \cup \mathbb I$$ 
 
+**Recta real** 
+es una recta en la que elegimos el origen de coordenadas y el tamaño de la unidad\
+(colocamos el 0 y el 1). Decimos que es **real** por que:
+
+- todo **número real** ocupa una **posición** en la recta numérica. 
+- todo **punto de la recta** se puede **hacer corresponder** con un número real.
+  
 [^nota2]:
 **Propiedad importante:** Los números reales son **DENSOS**, es decir, entre dos cualesquiera números reales hay *infinitos números* en medio.Eso es fácil de entender, si $a, b$ son dos números con $a < b$ tenemos que $$a < \frac {a + b}{2} <b $$ es decir, la *media* está entre los dos números. Y esto podemos hacerlo las veces que queramos (infinitas veces). Los racionales y los irracionales son también *densos*.
 
 # 2. Los intervalos y las semirectas.
 ****
 ## DEFINICIONES.
-Llamamos **recta real** a una recta en la que elegimos el origen de coordenadas y el tamaño de la unidad\
-(si colocamos el 0 y el 1). es **real** por que:
 
-- todo **número real** ocupa una **posición** en la recta numérica. 
-- todo **punto de la recta** se puede **hacer corresponder** con un número real.
+### **Intervalo** 
+es el conjunto de los números reales que hay entre dos números dados que llamamos **extremos**.
 
-Llamamos **intervalo** al conjunto de los números reales que hay entre dos números dados que llamamos **extremos**.
-
-Llamamos **semirecta** el conjunto de números reales que no está limitado por uno de sus extremos.
+### **Semirecta** 
+es el conjunto de números reales que no está limitado por uno de sus extremos.
 
 ## TIPOS DE INTERVALOS.
 
@@ -86,3 +93,12 @@ conjunto de números reales que hay entre dos dados **incluyendo** los extremos.
 <div id="intervalo3" class="jxgbox" style="width:100%; height:100%;"></div>
 :::
 
+## SEMIRECTAS.
+
+$(-\infty,a) = \{x | x < a\}$
+
+$(-\infty,a] = \{x | x \leq a\}$
+
+$(a, +\infty) = \{x | x > a\}$
+
+$[a, +\infty) = \{x | x \geq a\}$

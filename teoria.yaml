@@ -2,24 +2,24 @@ from: markdown+emoji
 to: html5
 fail-if-warnings: false
 standalone: true
+html-math-method:
+  method: mathjax
+  url: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 section-divs: true
 eol: lf
 toc: true
 toc-depth: 3
 filters:
-  - pandoc-static-katex
+  #  - pandoc-static-katex
   - pandoc-sidenote
 template: ./templates/tufte.html5
-include-before-body:
-  - ./templates/includes/teoria-before.txt
-include-after-body: 
-  - ./templates/includes/teoria.txt
 variables:
-  author: '@JallProfesor'
-  lang: 'es-ES'
+  author: "@JallProfesor"
+  lang: "es-ES"
   css:
-    - ../../assets/css/katex.min.css
+    #  - ../../assets/css/katex.min.css
     - ../../assets/css/tufte.min.css
+    - ../../assets/css/jsxgraph.min.css
     - ../../assets/css/custom.min.css
   favicon:
     - ../../assets/images/favicon.png

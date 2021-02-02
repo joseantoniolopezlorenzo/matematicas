@@ -2,17 +2,17 @@ from: markdown+emoji
 to: revealjs
 fail-if-warnings: false
 standalone: true
+html-math-method:
+  method: mathjax
 section-divs: true
 eol: lf
-filters:
-  - pandoc-static-katex
 template: ./templates/revealjs.html5
 variables:
   author: '@JallProfesor'
   lang: 'es-ES'
   css:
     - ../../assets/css/custom.min.css
-    - ../../assets/css/katex.min.css
+##    - ../../assets/css/katex.min.css
   favicon:
     - ../../assets/images/favicon.png
   theme: serif

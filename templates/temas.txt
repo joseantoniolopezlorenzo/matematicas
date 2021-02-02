@@ -1,1 +1,0 @@
-<script src="../../assets/js/jsxgraph/jsxgraphcore.js"></script>

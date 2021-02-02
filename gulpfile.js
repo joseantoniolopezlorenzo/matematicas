@@ -5,7 +5,6 @@ var rename = require("gulp-rename");
 var htmlmin = require("gulp-html-minifier");
 var gulpexec = require("gulp-exec");
 var uglify = require("gulp-uglify");
-var concat = require("gulp-concat");
 var path = require("path");
 var browserSync = require("browser-sync").create();
 var fs = require("fs");

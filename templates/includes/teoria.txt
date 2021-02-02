@@ -1,2 +1,1 @@
-<script src="../../assets/js/jsxgraph/jsxgraphcore.js"></script>
-<script src="../../assets/js/t-scripts.js"></script>
+<script src=""></script>
