@@ -38,8 +38,15 @@ css:
 # 3. Radicales {data-transition="slide"}
 
 ## 3.1. Simplifica,expresa con el menor número de radicales posibles: {data-transition="convex"}
-::: incremental
+
 1. $\sqrt{\frac{5}{3}} \cdot  \sqrt{\frac{27}{5}}$
 2. $\sqrt[4]{3^3} \cdot  \sqrt[4]{3^{17}}$
 3. $\sqrt[3]{\frac{1}{4}} \cdot  \sqrt[3]{2000}$
-:::
+
+## 3.2. Opera extrayendo el máximo número de factores de la raíz.
+
+1. $(\sqrt[4]{2^7})^3$
+2. $\sqrt{\sqrt[3]{2^{18}}}$
+3. $\sqrt[3]{a^5 \cdot b^{12} \cdot c^7}$
+4. $\sqrt[4]{\frac{2^8 \cdot 4^5}{8^3}}$
+5. $\sqrt[5]{\frac{2^6 \cdot 3^{12}}{5^{20}}}$

@@ -74,7 +74,7 @@ gulp.task("cp-images", function () {
 
 gulp.task("cp-javascript", function () {
   return gulp
-    .src(["./assets/js/*.js"])
+    .src(["./assets/js/**/*.js"])
     .pipe(uglify())
     .pipe(gulp.dest("./docs/assets/js"));
 });
@@ -107,7 +107,7 @@ gulp.task(
       gulp.watch("./src/**/*.md", gulp.series("convert-md"));
       gulp.watch("./templates/*.*", gulp.series("convert-md"));
       gulp.watch("./assets/css/*.css", gulp.series("minify-css"));
-      gulp.watch("./assets/js/*.js", gulp.series("cp-javascript"));
+      gulp.watch("./assets/js/**/*.js", gulp.series("cp-javascript"));
       gulp.watch("./assets/images/**/*.*", gulp.series("cp-images"));
       gulp.watch("./docs/**/*.html").on("change", reload);
       gulp.watch("./docs/assets/css/*.css").on("change", reload);

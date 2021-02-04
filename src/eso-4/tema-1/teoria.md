@@ -93,12 +93,56 @@ conjunto de números reales que hay entre dos dados **incluyendo** los extremos.
 <div id="intervalo3" class="jxgbox" style="width:100%; height:100%;"></div>
 :::
 
+Por ejemplo: $(-5,2] = \{x | -5 < x \leq 2\}$ 
+
+::: intervalo
+<div id="intervalo4" class="jxgbox" style="width:100%; height:100%;"></div>
+:::
+
+
 ## SEMIRECTAS.
 
-$(-\infty,a) = \{x | x < a\}$
+- conjunto de todos los menores que $a$
+  $$(-\infty,a) = \{x | x < a\}$$
 
-$(-\infty,a] = \{x | x \leq a\}$
+::: intervalo
+<div id="semirecta1" class="jxgbox" style="width:100%; height:100%"></div>
+:::
 
-$(a, +\infty) = \{x | x > a\}$
+- conjunto de todos los menores que $a$ y el mismo $a$ (incluido $a$)
+  $$(-\infty,a] = \{x | x \leq a\}$$
+  
+::: intervalo
+<div id="semirecta2" class="jxgbox" style="width:100%; height:100%"></div>
+:::
 
-$[a, +\infty) = \{x | x \geq a\}$
+- conjunto de todos los mayores que $a$
+  $$(a, +\infty) = \{x | x > a\}$$
+  
+::: intervalo
+<div id="semirecta3" class="jxgbox" style="width:100%; height:100%"></div>
+:::
+
+- conjunto de todos los menores que $a$ y el mismo $a$ (incluido $a$)
+  $$[a, +\infty) = \{x | x \geq a\}$$
+  
+::: intervalo
+<div id="semirecta4" class="jxgbox" style="width:100%; height:100%"></div>
+:::
+
+# 3. Potencias y raíces.
+
+## Potencias
+
+### Exponente entero
+
+Dado $a$, un número cualquiera, y $n$, un número *natural*, **la potencia $a^n$** es el producto del número $a$ por
+sí mismo $n$ veces. $a$ se llama la **base** y $n$, el **exponente**. Se dice que $a$ está **elevado** a $n$.
+
+Es **importante** recordar:
+
+- si la base es positiva, el resultado es siempre positivo. $a>0 \Rightarrow a^n>0$
+- si la base es negativa y el exponente es par, el resultado es positivo. $a<0, n \text{ es par} \Rightarrow a^n>0$
+- si la base es negativa y el exponente es impar, el resultado es negativo. $a<0, n \text{ es impar} \Rightarrow a^n<0$
+
+## Raíces
