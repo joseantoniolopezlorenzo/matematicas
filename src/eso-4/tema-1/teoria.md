@@ -6,8 +6,11 @@ date: 01/02/2021
 title-prefix: 4º ESO - Matemáticas
 description: Teoría del primer tema de matemáticas de 4º ESO
 keywords:
+    - preuniversitaria
+    - matemáticas
     - 4º ESO
     - números reales
+    - exponentes
     - radicales
     - logaritmos
 script: ../../assets/js/graficos/eso4-t1.js
@@ -136,8 +139,7 @@ Por ejemplo: $(-5,2] = \{x | -5 < x \leq 2\}$
 
 ### Exponente entero
 
-Dado $a$, un número cualquiera, y $n$, un número *natural*, **la potencia $a^n$** es el producto del número $a$ por
-sí mismo $n$ veces. $a$ se llama la **base** y $n$, el **exponente**. Se dice que $a$ está **elevado** a $n$.
+Dado $a$, un número cualquiera, y $n$, un número *natural* ($n \in \mathbb N$), **la potencia $a^n$** es el producto del número $a$ por sí mismo $n$ veces. $a$ se llama la **base** y $n$, el **exponente**. Se dice que $a$ está **elevado** a $n$. 
 
 Es **importante** recordar:
 

@@ -5,7 +5,6 @@ standalone: true
 section-divs: true
 eol: lf
 filters:
-  - pandoc-static-katex
   - pandoc-sidenote
 template: ./templates/tufte.html5
 include-after-body: 

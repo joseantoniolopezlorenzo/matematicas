@@ -10,7 +10,7 @@ eol: lf
 toc: true
 toc-depth: 3
 filters:
-  #  - pandoc-static-katex
+  #- pandoc-static-katex
   - pandoc-sidenote
 template: ./templates/tufte.html5
 variables:

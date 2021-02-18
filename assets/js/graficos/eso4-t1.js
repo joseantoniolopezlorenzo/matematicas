@@ -1,6 +1,7 @@
 (function () {
   JXG.Options.text.useMathJax = true;
-
+  JXG.Options.text.useMathJax.display = 'html';
+  
   const createBoard = function (id) {
     return JXG.JSXGraph.initBoard(id, {
       boundingbox: [-11, 1, 11, -1],
