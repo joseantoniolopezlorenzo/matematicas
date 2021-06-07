@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>$if(title-prefix)$$title-prefix$ – $endif$$title$</title>
+  <title>$if(title-prefix)$$title-prefix$ - $endif$$title$ $if(subtitle)$: $subtitle$ $endif$</title>
 $for(author-meta)$
   <meta name="author" content="$author-meta$">
 $endfor$
@@ -42,7 +42,6 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$">
 $endfor$
-
 $if(math)$
   $math$
 $endif$
